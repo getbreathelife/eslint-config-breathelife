@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Node.js: `node --version` (`which node`)"
+echo "Yarn: `yarn --version` (`which yarn`)"
+echo "Prettier: `prettier --version` (`which prettier`)"
+echo ""
+
+echo "Should be used from 'node_modules' (Printed to debug potential incompatibilities)"
+echo "ESLint: `eslint --version` (`which eslint`)"
+echo ""
+
+echo "PATH"
+tr ':' '\n' <<< "$PATH"

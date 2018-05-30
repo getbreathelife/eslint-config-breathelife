@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -e
+
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source $ROOT_DIR/bin/runner
+
+yarn_arguments=''
+
+while test $# != 0
+do
+  case "$1" in
+  --check) yarn_arguments='--check-files' ;;
+  esac
+  shift
+done
+
+
+execute_in_module $ROOT_DIR 'yarn install' "$yarn_arguments"

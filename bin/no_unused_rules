@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source $ROOT_DIR/bin/runner
+
+echo "($1) About to check that all ESLint rules are defined (non-default)."
+
+execute_in_module $1 $ROOT_DIR/node_modules/.bin/eslint-find-rules --unused
+statusCode=$?
+
+if [[ $statusCode != 0 ]]; then
+  echo ""
+  echo "It appears that there is some ESLint rules that exist from a plugin"
+  echo "that are not defined in any config (our or ones that we extend)."
+  echo "Check the output above to see the list of rules not defined."
+  echo ""
+  echo "An ESLint defined rule is one for that is defined somewhere in our"
+  echo "custom rules config (or the config we extend like Airbnb config). For" 
+  echo "example, let's assume the eslint-plugin-react defines a rule named"
+  echo "'react/button-has-type'. If no where in our config or in the ones we"
+  echo "extend there is a definition for 'react/button-has-type', then we will"
+  echo "error out."
+  echo ""
+  echo "The idea of doing this is ensuring that there is no default values"
+  echo "for rules and that our config or in the ones we extend define something"
+  echo "so that we don't end up with default values without noticing it."
+  exit $statusCode; 
+fi

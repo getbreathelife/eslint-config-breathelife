@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -e
+
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source $ROOT_DIR/bin/runner
+
+main() {
+  while true; do
+    read -p 'You are about to clean everything (node_modules, build data, etc.) continue? (Y/n): ' yn
+    case $yn in
+      [Yy]* ) clean; break;;
+      [Nn]* ) echo 'Aborting.'; exit;;
+      * ) echo 'Please answer yes or no.';;
+    esac
+  done
+}
+
+clean() {
+  clean_yarn
+}
+
+clean_yarn() {
+  echo 'Cleaning Yarn...'
+  find $ROOT_DIR -name 'node_modules' | xargs -n200 rm -rf
+}
+
+main

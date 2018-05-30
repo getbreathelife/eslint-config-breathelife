@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-breathelife",
+  "private": true,
+  "workspaces": [
+    "modules/**/*"
+  ],
+  "scripts": {
+    "lint": "yarn run -s lint:eslint && yarn run -s lint:prettier",
+    "lint:prettier": "prettier-check --ignore-path .prettierignore **/*.{js,json}",
+    "lint:eslint": "NODE_ENV=development node_modules/.bin/eslint --ignore-path '.gitignore' .",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "editorconfig-tools": "^0.1.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "jest": "^22.1.0",
+    "prettier": "^1.10.2",
+    "prettier-check": "^2.0.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/modules"
+    ]
+  }
+}

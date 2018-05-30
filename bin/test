@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+source $ROOT_DIR/bin/runner
+
+test_script='test:ci'
+
+while test $# != 0
+do
+  case "$1" in
+  -i|--interactive) test_script='test';;
+  esac
+  shift
+done
+
+execute_in_module $ROOT_DIR "yarn ${test_script}" $@

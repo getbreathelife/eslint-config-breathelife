@@ -1,0 +1,56 @@
+
+# Usage: execute_in_module project command [arguments...]
+#
+# Execute the command and it's argument into the specified workspace project.
+#
+# The `project` argument must be the project path **not** including the `modules`
+# subdirectory (which is auto-added via `$ROOT_DIR/modules`). If the `project`
+# equals to `$ROOT_DIR`, the `modules` suffix is not added and command is executed
+# inside the `$ROOT_DIR` directory (instead of `$ROOT_DIR/modules/$project`).
+#
+execute_in_module() {
+  project=$1; shift
+  command=$1; shift
+
+  relative_path="`modules_directory`/$project"
+  if [ "$project" == "$ROOT_DIR" ]; then
+    relative_path="$ROOT_DIR"
+  fi
+
+  pushd "$relative_path" > /dev/null
+  $command $@
+  statusCode=$?
+  popd > /dev/null
+
+  return $statusCode
+}
+
+# Usage: hoist_package module project
+#
+# Create a symlink at `$ROOT_DIR/modules/$project/node_modules/<package>` pointing to
+# `$ROOT_DIR/node_modules/<package>` so that node modules resolution uses the project
+# `node_modules` folder instead of the root project one.
+#
+# The `destination` argument must be the project path **not** including the `modules`
+# subdirectory (which is auto-added via `$ROOT_DIR/modules`) nor the `node_modules`
+# one (which is also auto-appended).
+#
+hoist_package() {
+  module=$1; shift
+  project=$1; shift
+
+  linkAt="`modules_directory`/$project/node_modules/$module"
+  linkPointingTo="$ROOT_DIR/node_modules/$module"
+
+  if [ ! "$linkAt" -ef "$linkPointingTo" ]; then
+    ln -s "$linkPointingTo" "$linkAt"
+  fi
+}
+
+# Usage:
+#
+# Returns the directory containing all workspace modules.
+#
+modules_directory() {
+  printf "$ROOT_DIR/modules"
+}
