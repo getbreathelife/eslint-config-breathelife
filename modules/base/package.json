@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-breathelife-base",
   "version": "1.0.0",
-  "description": "BreatheLife's base JS ESLint config",
+  "description": "Breathe Life's base JS ESLint config",
   "main": "index.js",
   "scripts": {
     "lint": "yarn -s lint:no-unused-rules",
@@ -19,7 +19,7 @@
     "javascript",
     "styleguide"
   ],
-  "author": "BreatheLife",
+  "author": "Breathe Life",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/breathelife/eslint-config-breathelife/issues"
@@ -29,10 +29,10 @@
     "node": ">= 4"
   },
   "dependencies": {
-    "eslint": "^4.15.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.14.0"
   },
   "devDependencies": {
     "in-publish": "^2.0.0",
