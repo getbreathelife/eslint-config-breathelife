@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-breathelife-node",
+  "version": "1.0.0",
+  "description": "BreatheLife's Node.js ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "(not-in-publish || yarn lint) && safe-publish-latest",
+    "lint": "yarn -s lint:no-unused-rules",
+    "lint:no-unused-rules": "../../bin/no_unused_rules node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/breathelife/eslint-config-breathelife"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "breathelife",
+    "javascript",
+    "styleguide"
+  ],
+  "author": "Breathe Life",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/breathelife/eslint-config-breathelife/issues"
+  },
+  "homepage": "https://github.com/breathelife/eslint-config-breathelife",
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-breathelife-base": "^2.0.0",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "devDependencies": {
+    "in-publish": "^2.0.0",
+    "safe-publish-latest": "^1.1.1"
+  }
+}

@@ -2,9 +2,11 @@ module.exports = {
   rules: {
     'jsx-quotes': ['error', 'prefer-single'],
 
+    // FIXME: Discuss final status on those rules (currently disabled)
     'react/button-has-type': 'off',
     'react/destructuring-assignment': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    // End
 
     'react/default-props-match-prop-types': 'error',
     'react/jsx-boolean-value': ['error', 'always'],
@@ -19,6 +21,5 @@ module.exports = {
       { ignorePureComponents: true },
     ],
     'react/sort-comp': 'off',
-    'react/jsx-no-bind': ['error', 'always'],
   },
 };

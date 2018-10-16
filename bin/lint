@@ -6,4 +6,5 @@ source $ROOT_DIR/bin/runner
 
 execute_in_module $ROOT_DIR 'yarn lint' $@
 execute_in_module base 'yarn lint' $@
+execute_in_module node 'yarn lint' $@
 execute_in_module web 'yarn lint' $@
