@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-breathelife-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Breathe Life's web ESLint config",
   "author": "Breathe Life",
   "main": "index.js",
