@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-breathelife-base.svg)](https://badge.fury.io/js/eslint-config-breathelife-base)
 
-This package provides BreatheLife's base JS .eslintrc as an extensible shared config.
+This package provides Breathe Life's base JS .eslintrc as an extensible shared config.
 
 ## Usage
 

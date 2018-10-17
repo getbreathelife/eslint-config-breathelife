@@ -6,8 +6,8 @@ This package provides BreatheLife's web JS .eslintrc as an extensible shared con
 
 Add to your project and extend config in your ESLint configuration file:
 
-1.  yarn add --dev eslint-config-breathelife
-1.  Add `'extends': 'breathelife'` to your `.eslintrc` or `eslintrc.js` file.
+1.  `yarn add --dev eslint-config-breathelife-web`
+1.  Add `'extends': 'breathelife-web'` to your `.eslintrc` or `eslintrc.js` file.
 
 ## Dependencies
 

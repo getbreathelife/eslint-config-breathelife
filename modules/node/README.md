@@ -6,7 +6,7 @@ This package provides Breathe Life Node .eslintrc as an extensible shared config
 
 Add to your project and extend config in your ESLint configuration file:
 
- 1. yarn add --dev eslint-config-breathelife-node
+ 1. `yarn add --dev eslint-config-breathelife-node`
  1. Add `'extends': 'breathelife-node'` to your `.eslintrc` or `eslintrc.js` file.
 
 ## Dependencies
