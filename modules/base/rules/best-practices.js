@@ -9,5 +9,7 @@ module.exports = {
 
     // We prefer to be able to use function, classes and variables before they were defined
     'no-use-before-define': 'off',
+    'quote-props': 'off',
+    radix: 'off',
   },
 };

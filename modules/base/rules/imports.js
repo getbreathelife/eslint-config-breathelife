@@ -13,7 +13,7 @@ module.exports = {
     'import/no-amd': 'error',
     'import/no-anonymous-default-export': 'off',
     'import/no-commonjs': 'error',
-    'import/no-nodejs-modules': 'error',
+    'import/no-nodejs-modules': 'off',
     'import/no-named-as-default': 'error',
     'import/prefer-default-export': 'off',
     'import/order': ['error', { groups: ['builtin', 'external', 'internal'] }],

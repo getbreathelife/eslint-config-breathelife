@@ -8,18 +8,19 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     // End
 
-    'react/default-props-match-prop-types': 'error',
+    'react/default-props-match-prop-types': 'off',
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-wrap-multilines': 'off',
-    'react/no-access-state-in-setstate': 'error',
+    'react/no-access-state-in-setstate': 'off',
     'react/no-redundant-should-component-update': 'error',
     'react/prefer-stateless-function': [
       'error',
       { ignorePureComponents: true },
     ],
     'react/sort-comp': 'off',
+    'react/prop-types': 0,
   },
 };
