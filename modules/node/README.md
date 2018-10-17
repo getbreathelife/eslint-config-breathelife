@@ -1,4 +1,4 @@
-# eslint-config-breathelife-web
+# eslint-config-breathelife-node
 
 This package provides Breathe Life Node .eslintrc as an extensible shared config.
 
