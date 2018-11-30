@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/breathelife/eslint-config-breathelife"
+    "url": "https://github.com/getbreathelife/eslint-config-breathelife"
   },
   "keywords": [
     "eslint",
@@ -18,9 +18,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/breathelife/eslint-config-breathelife/issues"
+    "url": "https://github.com/getbreathelife/eslint-config-breathelife/issues"
   },
-  "homepage": "https://github.com/breathelife/eslint-config-breathelife",
+  "homepage": "https://github.com/getbreathelife/eslint-config-breathelife",
   "engines": {
     "node": ">= 4"
   },
