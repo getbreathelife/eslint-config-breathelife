@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-breathelife-web",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Breathe Life's web ESLint config",
   "author": "Breathe Life",
   "main": "index.js",
@@ -32,6 +32,7 @@
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-breathelife-base": "^2.0.0",
     "eslint-find-rules": "^3.1.1",
     "eslint-plugin-filenames": "^1.3.2",
     "eslint-plugin-import": "^2.14.0",
