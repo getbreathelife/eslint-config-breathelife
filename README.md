@@ -23,7 +23,7 @@ but we instead use normal dependencies.
 Indeed, in our specific case, having normal dependencies reduce the maintenance burden
 of specifying all the needed peer dependencies when adding a specific ESLint configuration.
 
-That's means that we simply need to depend on the right config project to run ESLint.
+That means that we simply need to depend on the right config project to run ESLint.
 
 Of course, it could causes problem eventually, but we are ready to live with it.
 
