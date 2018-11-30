@@ -18,7 +18,7 @@ Indeed, in our specific case, having normal dependencies reduce the maintenance 
 of specifying all the needed peer dependencies when adding a specific ESLint
 configuration to a project.
 
-That's means that we simply need to depend on the right config project (mobile, node or
+That means that we simply need to depend on the right config project (mobile, node or
 web) to enable and configure ESLint.
 
 Of course, potential conflict problems could arise eventually, but we are ready to
