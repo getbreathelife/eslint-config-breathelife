@@ -9,11 +9,10 @@ The purpose of this repository is to mainly store BreatheLife's ESLint config fo
 The base ESLint rules that applies basically to JavaScript in general. This is framework agnostic and only
 targeting pure JavaScript code.
 
-It's not meant to be consumed by developers.
+It's not meant to be consumed by developers. Rather, developers should use `web` and `node`.
 
-### Web
-
-The ESLint rules that applies to web based project. Applies `base` ones plus specific rules for React.
+* web: the ESLint rules that applies to web-based projects. Applies the ones from `base` plus specific rules for React.
+* node: the ESLint rules that applies to backend projects. Applies the ones from `base`.
 
 ## Dependencies
 
