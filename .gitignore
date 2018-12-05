@@ -11,3 +11,5 @@ package-lock.json
 ## Yarn
 yarn.lock
 yarn-error.log
+
+.idea

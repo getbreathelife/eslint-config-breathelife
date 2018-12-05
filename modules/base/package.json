@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-breathelife-base",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "Breathe Life's base JS ESLint config",
   "main": "index.js",
   "scripts": {
