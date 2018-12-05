@@ -4,7 +4,6 @@ module.exports = {
     'eslint-config-breathelife-base',
 
     './rules/env',
-    './rules.imports',
     './rules/react',
   ].map(require.resolve),
 };
